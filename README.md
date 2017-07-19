@@ -11,7 +11,7 @@ With this to-do app, you can:
 - Filter tasks between all and tasks left to do
 
 Here's a screenshot of what the todo app looks like:
-![Screenshot of todo app](https://ibb.co/eYJJUk)
+![Screenshot of todo app](https://image.ibb.co/cbqAaQ/todoapp.png)
 
 ## Getting Started
 
