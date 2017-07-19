@@ -1,0 +1,44 @@
+<head>
+    <title>Task Manager</title>
+</head>
+
+<body>
+    {{> loginButtons}}
+    <div class="container">
+        <header><h1>Tasks</h1>
+
+            <label class="hide-finished">
+                <input type="checkbox" checked="{{hideFinished}}">
+                <b class="hiding-finished">Hide Finished Tasks</b>
+            </label>
+
+            <form class="new-resolution">
+                <input type="text" name="title" placeholder="New task...">
+                <input type="submit" value="submit" class="submit">
+            </form>
+        </header>
+        <ul>
+            {{#each resolutions}}
+                {{> resolution}}
+            {{/each}}
+        </ul>
+    </div>
+</body>
+
+<!--Templates-->
+<template name="resolution">
+    <li class="{{#if checked}}checked{{/if}}">
+            <input type="checkbox" checked="{{checked}}" class="toggle-checked">
+            <button class= "delete">Remove</button>
+            {{# if isOwner}}
+                <button class="toggle-private">
+                    {{#if private}}
+                        Private
+                    {{else}}
+                        Public
+                    {{/if}}
+                </button>
+            {{/if}}
+            {{title}}
+    </li>
+</template>
